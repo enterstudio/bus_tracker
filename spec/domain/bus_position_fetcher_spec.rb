@@ -4,9 +4,7 @@ require "bus_position_fetcher"
 describe BusPositionFetcher do
   context "fetches a hash" do
     Given(:a_sample_response) {
-      response = <<-RESPONSE
-      {"bus": [{"lat":"39.950916","lng":"-75.175949","label":"8077","VehicleID":"8077","BlockID":"7260","Direction":"WestBound","destination":"50th - Woodland","Offset":"1"},{"lat":"39.940273","lng":"-75.213531","label":"8436","VehicleID":"8436","BlockID":"7261","Direction":"WestBound","destination":"50th - Woodland","Offset":"1"}] }
-      RESPONSE
+      response = {"bus"=>[{"lat"=>"39.950916", "lng"=>"-75.175949", "label"=>"8077", "VehicleID"=>"8077", "BlockID"=>"7260", "Direction"=>"WestBound", "destination"=>"50th - Woodland", "Offset"=>"1"}, {"lat"=>"39.940273", "lng"=>"-75.213531", "label"=>"8436", "VehicleID"=>"8436", "BlockID"=>"7261", "Direction"=>"WestBound", "destination"=>"50th - Woodland", "Offset"=>"1"}]}
     }
     
     Given(:url_fetcher){ flexmock(hash_for_url: a_sample_response)}

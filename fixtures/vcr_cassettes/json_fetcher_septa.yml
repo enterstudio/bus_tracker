@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www3.septa.org/transitview/bus_route_data/12
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 10 Feb 2013 01:58:20 GMT
+      Server:
+      - Apache
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Last-Modified:
+      - Sun, 10 Feb 2013 01:58:20 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '170'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+    body:
+      encoding: US-ASCII
+      string: ! '{"bus": [{"lat":"39.940331","lng":"-75.213493","label":"5661","VehicleID":"5661","BlockID":"7257","Direction":"WestBound","destination":"50th
+        - Woodland","Offset":"2"}] }'
+    http_version: 
+  recorded_at: Sun, 10 Feb 2013 01:58:19 GMT
+recorded_with: VCR 2.4.0

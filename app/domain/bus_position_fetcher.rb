@@ -1,4 +1,3 @@
-require "json"
 class BusPositionFetcher
 
   def initialize(bus_route, json_fetcher)
@@ -7,7 +6,7 @@ class BusPositionFetcher
   end
 
   def fetch_positions_as_hashes
-    JSON.parse(@json_fetcher.hash_for_url(route_url))["bus"]
+    @json_fetcher.hash_for_url(route_url)["bus"]
   end
 
 protected
