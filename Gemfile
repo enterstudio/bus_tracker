@@ -30,6 +30,7 @@ group :test, :development do
   gem "rb-fsevent", '~> 0.9.1' 
   gem "vcr"
   gem "webmock"
+  gem "test-unit"
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
