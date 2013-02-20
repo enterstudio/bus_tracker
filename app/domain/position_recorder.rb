@@ -6,11 +6,11 @@ class PositionRecorder
 
   def record_position!(hash)
     @recorded_position_creator.create!( bus_route: @bus_route,
-                                        vehicle_id: hash["VehicleID"],
+                                        bus_id: hash["VehicleID"],
                                         block_id: hash["BlockID"],
                                         destination: hash["destination"],
                                         direction: hash["Direction"],
-                                        recorded_at: recorded_time(hash["Offset"]),
+                                        reported_at: recorded_time(hash["Offset"]),
                                         location:  location(hash["lng"],hash["lat"])
                                       )
 
