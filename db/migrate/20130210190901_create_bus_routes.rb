@@ -2,7 +2,7 @@ class CreateBusRoutes < ActiveRecord::Migration
   def change
     create_table :bus_routes do |t|
       t.string :name
-      t.column :route_outline, :polygon, :geometric=>true
+      t.column :route_outline, :multi_line_string, :geometric=>true,:srid=>4326
 
       t.timestamps
     end

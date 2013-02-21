@@ -11,15 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210190901) do
+ActiveRecord::Schema.define(:version => 20130210191906) do
 
   create_table "bus_routes", :force => true do |t|
     t.string   "name"
-    t.string   "route_outline", :limit => nil
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
+    t.datetime "created_at",                                                         :null => false
+    t.datetime "updated_at",                                                         :null => false
+    t.spatial  "route_outline", :limit => {:srid=>4326, :type=>"multi_line_string"}
   end
 
   add_index "bus_routes", ["name"], :name => "index_bus_routes_on_name", :unique => true
+
+  create_table "recorded_positions", :force => true do |t|
+    t.integer  "bus_route_id"
+    t.integer  "bus_id"
+    t.string   "direction"
+    t.integer  "block_id"
+    t.string   "destination"
+    t.datetime "reported_at"
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.spatial  "location",     :limit => {:srid=>0, :type=>"point"}
+  end
 
 end
