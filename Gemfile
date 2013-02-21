@@ -8,6 +8,7 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'activerecord-postgis-adapter'
 
+gem "gtfs"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
