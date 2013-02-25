@@ -16,7 +16,7 @@ describe PositionRecorder do
       args[:bus_route].should == route}
     }
     And { position_creator.should have_received(:create!).and {|args|
-      args[:vehicle_id].should == "8077"}
+      args[:bus_id].should == "8077"}
     }
     And { position_creator.should have_received(:create!).and {|args|
       args[:block_id].should == "7260"}
@@ -31,7 +31,7 @@ describe PositionRecorder do
       args[:destination].should == "50th - Woodland"}
     }
     And { position_creator.should have_received(:create!).and {|args|
-      args[:recorded_at].to_i.should == about((Time.now - 60).to_i).delta(3)}
+      args[:reported_at].to_i.should == about((Time.now - 60).to_i).delta(3)}
     }
   end
 end
