@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'activerecord-postgis-adapter'
+gem 'activerecord-postgis-adapter', '>= 0.5.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
