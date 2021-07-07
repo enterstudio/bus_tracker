@@ -29,7 +29,7 @@ group :test, :development do
   gem "guard-rspec"
   gem "rb-fsevent", '~> 0.9.1' 
   gem "vcr"
-  gem "webmock"
+  gem "webmock", ">= 1.9.0"
   gem "test-unit"
 end
 # To use ActiveModel has_secure_password
