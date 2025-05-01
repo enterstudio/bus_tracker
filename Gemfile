@@ -23,7 +23,7 @@ end
 gem 'jquery-rails'
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0"
+  gem "rspec-rails", "~> 8.0", ">= 8.0.0"
   gem "rspec-given"
   gem "flexmock"
   gem "guard-rspec"
